@@ -35,11 +35,11 @@ class Card:
         elif(self.rank=="jack"):
             return 10
         elif(self.rank=="queen"):
-            return 11     
+            return 10     
         elif(self.rank=="king"):
-            return 12
+            return 10
         elif(self.rank=="ace"):
-            return 13
+            return 11
         else:
             return 0
 
