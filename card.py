@@ -15,23 +15,23 @@ class Card:
     def checkRank(self):
 
         if(self.rank=="2"):
-            return 1
-        elif(self.rank=="3"):
             return 2
-        elif(self.rank=="4"):
+        elif(self.rank=="3"):
             return 3
+        elif(self.rank=="4"):
+            return 4
         elif(self.rank=="5"):
-            return 4 
+            return 5 
         elif(self.rank=="6"):
-            return 5  
-        elif(self.rank=="7"):
             return 6  
-        elif(self.rank=="8"):
+        elif(self.rank=="7"):
             return 7  
-        elif(self.rank=="9"):
+        elif(self.rank=="8"):
             return 8  
+        elif(self.rank=="9"):
+            return 9  
         elif(self.rank=="10"):
-            return 9 
+            return 10 
         elif(self.rank=="jack"):
             return 10
         elif(self.rank=="queen"):
@@ -53,7 +53,7 @@ class Card:
     	elif(self.suit =="spades"):
     		return 4
     	else:
-    		return 0
+    		return 1
 
     def displayCard(self):
         print (self.rank+" of "+self.suit)

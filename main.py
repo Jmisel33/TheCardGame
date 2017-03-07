@@ -5,7 +5,7 @@ from card import Card
 from deck import Deck
 
 score = 0
-
+dealerscore = 0
 
 
 print("The Game is Black Jack. The Rules are simple, Its you vs. the dealer. You will be delt two cards and if you would like to get another type hit or if you'd like to stay type stay. Got it? ")
@@ -17,8 +17,10 @@ raw_input("Press enter for the deal")
 dealershand = Deck()
 dealershand. Shuffle()
 currentcard = dealershand. TakeFromTop()
+dealerscore = currentcard.orderRank + dealerscore
 currentcard. displayCard()
 currentcard = dealershand. TakeFromTop()
+dealerscore = currentcard.orderRank + dealerscore
 currentcard. displayCard()
 
 
@@ -46,3 +48,9 @@ print(score)
 if score > 21:
     print("BUST")
 
+if score == 21:
+    print("Lucky hand my man")
+if dealerscore > score:
+    print("Dealer Wins")
+if score > dealerscore:
+    print("Player 1 wins")
